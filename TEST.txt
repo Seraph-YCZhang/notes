@@ -1,4 +1,4 @@
-T01001	hsa	9606
+T01001	hsa	9606  did not find
 T01005	ptr	9598
 T02283	pps	9597
 T02442	ggo	9595
