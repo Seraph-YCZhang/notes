@@ -1,5 +1,5 @@
 ## Two Sum
-```
+```python
 def twoSum(self, nums, target):
     length = len(nums)
     for i in range(length-1):
@@ -9,7 +9,7 @@ def twoSum(self, nums, target):
                     break
 ```
  ## Jewels and stones
- ```
+ ```python
  class Solution_1:
     def numJewelsInStones(self, J, S):
         """
