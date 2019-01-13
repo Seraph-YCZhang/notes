@@ -1,4 +1,5 @@
 ## Two Sum
+```
 def twoSum(self, nums, target):
     length = len(nums)
     for i in range(length-1):
@@ -6,8 +7,9 @@ def twoSum(self, nums, target):
             if nums[i]+nums[j]==target:
                     return i,j
                     break
- 
+```
  ## Jewels and stones
+ ```
  class Solution_1:
     def numJewelsInStones(self, J, S):
         """
@@ -22,6 +24,7 @@ def twoSum(self, nums, target):
                     if str_2 == str_1:
                         num += 1
         return num
+```
 				
 
         
