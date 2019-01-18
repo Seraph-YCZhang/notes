@@ -1,5 +1,5 @@
 # Statistic
-    Easy 4 Medium 0 Hard 0
+    Total 5 Easy 5 Medium 0 Hard 0
     
 ## Two Sum
 ```python
@@ -105,6 +105,7 @@ class Solution:
 ```
 method 2
 ```
-using ord to get ASC II number of the character 
+using ord() to get ASC II number of the character 
 then plus 32 to each for getting the lower case
+chr() asc II => character
 ```
