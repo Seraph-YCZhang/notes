@@ -92,3 +92,19 @@ class Solution:
             act_emails.add(str_l+'@'+str_r)
         return len(act_emails)
 ```
+## To Lower Case
+version 1 48ms
+```python
+class Solution:
+    def toLowerCase(self, str):
+        """
+        :type str: str
+        :rtype: str
+        """
+        return str.lower()
+```
+method 2
+```
+using ord to get ASC II number of the character 
+then plus 32 to each for getting the lower case
+```
