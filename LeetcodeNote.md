@@ -55,5 +55,37 @@ class Solution:
                 count += 1
         return count
  ```
+version 2
+```python
+class Solution:
+    def hammingDistance(self, x, y):
+        """
+        :type x: int
+        :type y: int
+        :rtype: int
+        """
+        return bin(x^y).count('1')
+```
 
-        
+## Unique Email Addresses
+version 1 76ms
+```python
+class Solution:
+    def numUniqueEmails(self, emails):
+        """
+        :type emails: List[str]
+        :rtype: int
+        """
+        count = 0
+        act_emails = set({})
+        for str in emails:
+            pos = str.index('@')
+            # print(pos)
+            str_l = str[0: pos]
+            str_r = str[pos+1:]
+            pos_ = str_l.index('+')
+            str_l = str_l[0:pos_]
+            str_l = str_l.replace('.', '')
+            act_emails.add(str_l+'@'+str_r)
+        return len(act_emails)
+```
