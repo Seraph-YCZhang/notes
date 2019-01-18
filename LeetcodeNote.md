@@ -1,3 +1,6 @@
+# Statistic
+    Easy 4 Medium 0 Hard 0
+    
 ## Two Sum
 ```python
 def twoSum(self, nums, target):
