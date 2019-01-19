@@ -1,5 +1,5 @@
 # Statistic
-    Total 5 Easy 5 Medium 0 Hard 0
+    Total 6 Easy 6 Medium 0 Hard 0
     
 ## Two Sum
 ```python
@@ -108,4 +108,48 @@ method 2
 using ord() to get ASC II number of the character 
 then plus 32 to each for getting the lower case
 chr() asc II => character
+```
+
+##  N-Repeated Element in Size 2N Array
+version 1 112ms
+```python
+class Solution:
+    def repeatedNTimes(self, A):
+        """
+        :type A: List[int]
+        :rtype: int
+        """
+        length = len(A)
+        half = 0.5 * length
+        list_ = [0]*(max(A)+1)
+        for _ in A:
+            # print(_)
+            list_[_] += 1
+        return list_.index(half)
+```
+version 2 84ms
+```python 
+class Solution:
+    def repeatedNTimes(self, A):
+        """
+        :type A: List[int]
+        :rtype: int
+        """
+        return int((sum(A)-sum(set(A)))/(len(A)/2-1))
+```
+Offical solution 1 84ms:
+collections.counter:A counter is a container that 
+
+stores elements as dictionary keys, and their counts are stored as dictionary values.
+```python
+class Solution:
+    def repeatedNTimes(self, A):
+        """
+        :type A: List[int]
+        :rtype: int
+        """
+        count = collections.Counter(A)
+        for k in count:
+            if count[k] > 1:
+                return k
 ```
