@@ -138,6 +138,7 @@ class Solution:
         return int((sum(A)-sum(set(A)))/(len(A)/2-1))
 ```
 Offical solution 1 84ms:
+
 collections.counter:A counter is a container that 
 
 stores elements as dictionary keys, and their counts are stored as dictionary values.
