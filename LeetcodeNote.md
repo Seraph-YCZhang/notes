@@ -1,5 +1,5 @@
 # Statistic
-    Total 6 Easy 6 Medium 0 Hard 0
+    Total 7 Easy 7 Medium 0 Hard 0
     
 ## Two Sum
 ```python
@@ -153,4 +153,21 @@ class Solution:
         for k in count:
             if count[k] > 1:
                 return k
+```
+## Sort Array By Parity
+```python
+class Solution:
+    def sortArrayByParity(self, A):
+        """
+        :type A: List[int]
+        :rtype: List[int]
+        """
+        List = []
+        for num in A:
+            if num%2 == 0:
+                List.append(num)
+        for num in A:
+            if num%2 != 0:
+                List.append(num)
+        return List
 ```
