@@ -171,3 +171,18 @@ class Solution:
                 List.append(num)
         return List
 ```
+## flipping-an-imag
+```python
+class Solution:
+    def flipAndInvertImage(self, A):
+        """
+        :type A: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        for line in A:
+            line.reverse()
+            # print(line)
+            for num in range(0,len(line)):
+                line[num] = line[num] ^ 1
+        return A
+```
