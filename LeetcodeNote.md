@@ -172,6 +172,7 @@ class Solution:
         return List
 ```
 ## flipping-an-imag
+method 1 80ms
 ```python
 class Solution:
     def flipAndInvertImage(self, A):
@@ -185,4 +186,15 @@ class Solution:
             for num in range(0,len(line)):
                 line[num] = line[num] ^ 1
         return A
+```
+method 2 72ms
+```python
+class Solution:
+    def flipAndInvertImage(self, A):
+        """
+        :type A: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        return [[1 - num for num in line[::-1]]for line in A]
+
 ```
