@@ -198,3 +198,16 @@ class Solution:
         return [[1 - num for num in line[::-1]]for line in A]
 
 ```
+## Squares of a Sorted Array
+```python
+class Solution:
+    def sortedSquares(self, A):
+        """
+        :type A: List[int]
+        :rtype: List[int]
+        """
+        for num in range(0,len(A)):
+            A[num] = A[num]**2
+        A.sort()
+        return A
+```
