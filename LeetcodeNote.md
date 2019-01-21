@@ -1,5 +1,5 @@
 # Statistic
-    Total 8 Easy 8 Medium 0 Hard 0
+    Total 10 Easy 10 Medium 0 Hard 0
     
 ## Two Sum
 ```python
@@ -210,4 +210,26 @@ class Solution:
             A[num] = A[num]**2
         A.sort()
         return A
+```
+##  Unique Morse Code Words
+method 1 56ms
+```python
+class Solution:
+    def uniqueMorseRepresentations(self, words):
+        """
+        :type words: List[str]
+        :rtype: int
+        """
+        trans = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        after_trans = set()
+        for word in words:
+            trans_word = ''
+            temp = []
+            for character in word:
+                # print(ord(character)-97,trans[ord(character)-97])
+                temp.append(trans[ord(character)-97])
+            trans_word = ''.join(temp)
+            # print(trans_word)
+            after_trans.add(trans_word)
+        return len(after_trans)
 ```
