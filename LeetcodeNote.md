@@ -233,3 +233,22 @@ class Solution:
             after_trans.add(trans_word)
         return len(after_trans)
 ```
+## Largest Perimeter Triangle
+```python
+class Solution:
+    def largestPerimeter(self, A):
+        """
+        :type A: List[int]
+        :rtype: int
+        """
+        A.sort()
+        i,j,k = -1,-2,-3
+        while abs(k) <= len(A) and abs(j)<=len(A)-1 and abs(i)<=len(A)-2:
+            print(A[k]+A[j],A[i]-A[k],A[i]-A[j])
+            if A[k]+A[j]>A[i]:
+                return A[k]+A[j]+A[i]
+            k -= 1
+            j -= 1
+            i -= 1
+        return 0
+```
