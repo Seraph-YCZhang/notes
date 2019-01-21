@@ -1,5 +1,5 @@
 # Statistic
-    Total 7 Easy 7 Medium 0 Hard 0
+    Total 8 Easy 8 Medium 0 Hard 0
     
 ## Two Sum
 ```python
