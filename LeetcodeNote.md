@@ -234,6 +234,9 @@ class Solution:
         return len(after_trans)
 ```
 ## Largest Perimeter Triangle
+For the triangle, if we have a,b,c,d(a>b>c>d) four edges, when a b d can form a triangle
+
+a b c can also form a triangle with longer perimeter, cuz we have a < b + d < b + c
 ```python
 class Solution:
     def largestPerimeter(self, A):
