@@ -255,3 +255,46 @@ class Solution:
             i -= 1
         return 0
 ```
+
+## K Closest Points to Origin
+bad implementation lol 2608ms 3.10%
+```python
+class Solution:
+    def merge(self, l1, l2):
+        list_ = []
+        i, j = 0, 0
+        while i < len(l1) or j < len(l2):
+            if i == len(l1):
+                list_.append(l2[j])
+                j += 1
+            elif j == len(l2):
+                list_.append(l1[i])
+                i += 1
+            elif l1[i][0]**2+l1[i][1]**2 <= l2[j][0]**2+l2[j][1]**2:
+                list_.append(l1[i])
+                i += 1
+            elif l1[i][0]**2+l1[i][1]**2 > l2[j][0]**2+l2[j][1]**2:
+                list_.append(l2[j])
+                j += 1
+        return list_
+
+
+    def merge_sort(self, points):
+        if len(points) < 2:
+            return points
+        else:
+            half = int(len(points)/2)
+            list_1 = self.merge_sort(points[0:half])
+            list_2 = self.merge_sort(points[half:])
+        return self.merge(list_1, list_2)
+    
+    def kClosest(self, points, K):
+        """
+        :type points: List[List[int]]
+        :type K: int
+        :rtype: List[List[int]]
+        """
+        list_ = self.merge_sort(points)
+        return list_[0:K]
+
+```
