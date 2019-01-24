@@ -298,3 +298,15 @@ class Solution:
         return list_[0:K]
 
 ```
+method 2 372ms 100%
+```python
+class Solution:
+    def kClosest(self, points, K):
+        """
+        :type points: List[List[int]]
+        :type K: int
+        :rtype: List[List[int]]
+        """
+        
+        return sorted(points,key = lambda x: x[0]**2+x[1]**2)[0:K]
+```
