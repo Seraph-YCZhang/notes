@@ -1,5 +1,5 @@
 # Statistic
-    Total 10 Easy 10 Medium 0 Hard 0
+    Total 12 Easy 12 Medium 0 Hard 0
     
 ## Two Sum
 ```python
@@ -299,6 +299,8 @@ class Solution:
 
 ```
 method 2 372ms 100%
+
+lambda - anonymous function  
 ```python
 class Solution:
     def kClosest(self, points, K):
@@ -306,7 +308,6 @@ class Solution:
         :type points: List[List[int]]
         :type K: int
         :rtype: List[List[int]]
-        """
-        
+        """       
         return sorted(points,key = lambda x: x[0]**2+x[1]**2)[0:K]
 ```
