@@ -311,3 +311,21 @@ class Solution:
         """       
         return sorted(points,key = lambda x: x[0]**2+x[1]**2)[0:K]
 ```
+##942. DI String Match
+For 'I' movement, if we add the smallest element to the arr, there would be always an increasement comparing with following elements.
+```python
+class Solution:
+    def diStringMatch(self, S: 'str') -> 'List[int]':
+        max_ = len(S)
+        min_ = 0
+        arr = []
+        for chr_ in S:
+            if chr_ is 'I':
+                arr.append(min_)
+                min_ += 1
+            else:
+                arr.append(max_)
+                max_ -= 1
+        arr.append(min_)
+        return arr
+```
