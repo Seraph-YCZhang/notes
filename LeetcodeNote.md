@@ -312,6 +312,7 @@ class Solution:
         return sorted(points,key = lambda x: x[0]**2+x[1]**2)[0:K]
 ```
 ##942. DI String Match
+
 For 'I' movement, if we add the smallest element to the arr, there would be always an increasement comparing with following elements.
 ```python
 class Solution:
