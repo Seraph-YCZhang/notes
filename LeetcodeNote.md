@@ -10,7 +10,23 @@ def twoSum(self, nums, target):
             if nums[i]+nums[j]==target:
                     return i,j
                     break
+
+class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        length = len(nums)
+        difdict= {}
+        for i in range(length):
+            if target - nums[i] in difdict:
+                return [difdict[target - nums[i]],i]
+            else:
+                difdict[nums[i]] = i
 ```
+
  ## Jewels and stones
  ```python
  class Solution_1:
