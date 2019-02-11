@@ -359,3 +359,18 @@ class Solution:
         return trans
         
 ```
+### 896. Monotonic Array 11/2/2019
+```python
+class Solution:
+    def isMonotonic(self, A: 'List[int]') -> 'bool':
+        if sorted(A)==A or sorted(A,reverse=True)==A:
+            return True
+        else:
+            return False
+class Solution:
+    def isMonotonic(self, A: 'List[int]') -> 'bool':
+        if sorted(A) in [A,A[::-1]]:
+            return True
+        else:
+            return False
+```
