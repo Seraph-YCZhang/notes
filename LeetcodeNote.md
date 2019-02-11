@@ -330,3 +330,16 @@ class Solution:
         arr.append(min_)
         return arr
 ```
+### 867. Transpose Matrix
+```python
+class Solution:
+    def transpose(self, A: 'List[List[int]]') -> 'List[List[int]]':
+        trans = []
+        for j in range(0,len(A[0])):
+            newarr = []
+            for i in range(0,len(A)):
+                newarr.append(A[i][j])
+            trans.append(newarr)
+        return trans
+        
+```
