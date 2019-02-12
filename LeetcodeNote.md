@@ -373,4 +373,7 @@ class Solution:
             return True
         else:
             return False
+    #by lee215
+    def isMonotonic(self, A):
+        return not {cmp(i, j) for i, j in zip(A, A[1:])} >= {1, -1}
 ```
