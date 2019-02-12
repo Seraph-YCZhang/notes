@@ -359,7 +359,7 @@ class Solution:
         return trans
         
 ```
-### 896. Monotonic Array 11/2/2019
+### 896. Monotonic Array Feb.2.2019
 ```python
 class Solution:
     def isMonotonic(self, A: 'List[int]') -> 'bool':
