@@ -377,3 +377,12 @@ class Solution:
     def isMonotonic(self, A):
         return not {cmp(i, j) for i, j in zip(A, A[1:])} >= {1, -1}
 ```
+
+### 448. Find All Numbers Disappeared in an Array
+Pay attention to the return type!!!
+```python
+class Solution:
+    def findDisappearedNumbers(self, nums: 'List[int]') -> 'List[int]':
+        a = set(range(1,len(nums)+1))
+        return list(a.difference(set(nums)))
+```        
