@@ -386,3 +386,25 @@ class Solution:
         a = set(range(1,len(nums)+1))
         return list(a.difference(set(nums)))
 ```        
+
+### 69. Majority Element
+```python
+class Solution:
+    def majorityElement(self, nums: 'List[int]') -> 'int':
+        # dic = {}
+        # for i in nums:
+        #     if i in dic:
+        #         dic[i] += 1
+        #     else:
+        #         dic[i] = 1
+        # ret = max(dic,key = lambda key: dic[key])
+        # return  ret
+        
+        # counts = collections.Counter(nums)
+        # return max(counts.keys(),key = counts.get)
+        
+        majority_count = len(nums)//2
+        for candidate in set(nums):
+            if sum(1 for elem in nums if elem == candidate) > majority_count:
+                return candidate
+```                
