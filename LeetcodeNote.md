@@ -408,3 +408,29 @@ class Solution:
             if sum(1 for elem in nums if elem == candidate) > majority_count:
                 return candidate
 ```                
+## 830. Positions of Large Groups
+```python
+class Solution:
+    def largeGroupPositions(self, S: 'str') -> 'List[List[int]]':
+        ret,temp = [],[]
+        count = 1
+        for i in range(len(S)-1):
+            if S[i] == S[i+1]:
+                count += 1
+            elif S[i] != S[i+1]:
+                if count >= 3:
+                    temp[1] += 1
+                count = 1
+                if len(temp) == 2:
+                    ret.append(temp)
+                temp = []
+            if count == 3:
+                temp=[i-1,i]
+            if count > 3:
+                temp[1] += 1
+            if i == len(S)-2:
+                if count >= 3:
+                    temp[1] += 1
+                    ret.append(temp)
+        return ret
+```
