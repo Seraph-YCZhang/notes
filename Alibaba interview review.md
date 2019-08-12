@@ -4,32 +4,32 @@
 
 ## Js
 - what's new in es 6
-- how to build a array with no duplicate from an array
+- how to build an array with no duplicate from an array
 
 ## React
-- what happends after setstate
-- vitrul dom real dom
+- what happens after setstate
+- virtual dom real dom
 
 ## webpack
 
 ## css
-how felx helps in layout like it make some layout achieved much eazier
+what flex helps in layout like it makes some layout achieved much easier
 
 ## part back-end
 
 ## sql
-- select the student's grade information who has lowest age ( the grades and ages are in two tables)
-- select from two table. forgot
+- select the student's grade information who has the lowest age ( the grades and ages are in two tables)
+- select from two tables. forgot
 
 ## express
-how middleware works. how tansmit the value from middleware to the next layer
+how middleware works. how it transmits the value from middleware to the next layer
 
 ## algorithms
 top-k in x length array
 
 ## Q
 
-## something feeling most sense of achinevement during undergraduate time
+## something feeling the most sense of achievement during undergraduate time
 
 ## why front-end
 
