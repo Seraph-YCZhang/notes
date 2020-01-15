@@ -1,2 +1,2 @@
-# Learn
-Some notes in learning
+# Notes
+Study Notes
