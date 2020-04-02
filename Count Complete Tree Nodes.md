@@ -9,7 +9,7 @@ so if we have a complete binary tree, like this
 Though the value not like this in the problem, we can see them as no.
 According to the defination of complete binary tree, there will only be not fully filled in the last layer.  
 if left height equals right height, it is a full binary tree, its total nodes is 2 ** d - 1
-# Assuming the tree has 'd' depth, there will be 2 ** (d - 1) - 1 nodes in layers but the last one.  
+```# Assuming the tree has 'd' depth, there will be 2 ** (d - 1) - 1 nodes in layers but the last one. ``` 
 Next step, try to find what node in last layer is the last one.  Like 6 , so we have totally six nodes.  
 And we can use binary search to find it. We know that we at least has 2 ** (d - 1) nodes which is 4 in this situtaion. 
 And max is 7. In this way, the range is [4, 7].
